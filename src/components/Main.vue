@@ -1,7 +1,7 @@
 <template>
   <main>
     <section class="content bg-black">
-      <div class="container">--> Content goes here</div>
+      <Cards/>
     </section>
     <section class="content bg-blue">
       <div class="container">
@@ -43,8 +43,12 @@
 </template>
 
 <script>
+import Cards from "./Cards";
 export default {
   name: "Main",
+  components:{
+    Cards,
+  }
 };
 </script>
 
@@ -54,11 +58,10 @@ main {
   .content {
     color: white;
     width: 100%;
-    height: 15vh;
     .container {
       display: flex;
-      align-items: center;
       height: 100%;
+      padding: 20px;
       ul {
         width: 100%;
         list-style: none;
@@ -68,11 +71,11 @@ main {
         li {
           display: flex;
           align-items: center;
+          img {
+            width: 20%;
+            margin-right: 15px;
+          }
         }
-      }
-      img {
-        width: 20%;
-        margin-right: 15px;
       }
     }
   }
